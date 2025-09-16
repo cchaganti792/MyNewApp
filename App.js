@@ -1,26 +1,41 @@
-import { View,Text } from 'react-native';
+import { StyleSheet,View ,FlatList} from 'react-native';
 import LittleLemonHeader from './components/LittleLemonHeader';
 import LittleLemonFooter from './components/LittleLemonFooter';
-
+/*import MenuItems from './components/MenuItems';*/
+import MenuItems from './components/FlatListMenu';
+import WelcomeScreen from './WelcomeScreen';
+/*import {  FlatList }  from 'react-native-web';*/  
+/* below is for  scrollview when we watned to test flatlist */
 export default function App() {
   return (
-/*   <View
-      style={{
-        flex: 1,
-        backgroundColor: '#495E57',
-        justifyContent: 'space-between',
-      }}>
+    <View style={styles.container}>
       <LittleLemonHeader />
+      <WelcomeScreen />
+      <MenuItems /> 
       <LittleLemonFooter />
     </View>
   );
 }
-  */
- <View style={{flex: 1,
- backgroundColor:'#495E57',
-/* justifyContent:'space-between'*/}}>
-   <Text style={{padding:50,fontSize:30,color:'black',textAlign:'center'}}>Welcome to </Text>
-   <Text style={{padding:40,fontSize:30,color:'black',textAlign:'center'}}>Little Lemon</Text>
- </View>
+  
+
+/* 
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <LittleLemonHeader />
+      <WelcomeScreen />
+      <FlatListMenu />
+      <LittleLemonFooter />
+    </View>
   );
 }
+  * */
+  
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'black',
+    justifyContent: 'space-between',
+  },
+});

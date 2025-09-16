@@ -56,21 +56,29 @@ export default function LittleLemonFooter() {
   */
 
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { StyleSheet,View, Text } from 'react-native';
 export default function LittleLemonFooter() {
     return (
-        <View style={{ backgroundColor: '#F4CE14',
-         marginBottom:0,padding:20,
-        }}>
+        <View style={styles.footer}>
             <Text 
-            style={{
-                fontSize: 18,
-                color: 'black',
-                textAlign:'center',
-                bottom:0,
-            }}> 
-            All rights reserved by Little Lemon, 2022{' '}
+            style={styles.footerText}>
+                All rights reserved by Little Lemon, 2022
             </Text>
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    footer: {
+        backgroundColor: '#EE9972',
+        padding: 20,
+        alignItems: 'center',
+        position: 'absolute',
+        bottom: 0,
+        width: '100%',
+    },
+    footerText: {
+        color: 'black',
+        fontWeight: 'bold',
+    },
+});
